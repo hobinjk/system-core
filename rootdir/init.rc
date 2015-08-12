@@ -501,6 +501,7 @@ service debuggerd /system/bin/debuggerd
 
 service ril-daemon /system/bin/rild
     class main
+    socket dill-pickle stream 660 radio system
     socket rild stream 660 root radio
     socket rild-debug stream 660 radio system
     user root
