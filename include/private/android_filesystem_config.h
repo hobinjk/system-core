@@ -108,7 +108,6 @@
 #define AID_SHARED_GID_START 50000 /* start of gids for apps in each user to share */
 #define AID_SHARED_GID_END   59999 /* start of gids for apps in each user to share */
 
-#if !defined(EXCLUDE_FS_CONFIG_STRUCTURES)
 struct android_id_info {
     const char *name;
     unsigned aid;
@@ -303,5 +302,4 @@ static inline void fs_config(const char *path, int dir,
             path, pc->prefix ? pc->prefix : "", *uid, *gid, *mode);
 #endif
 }
-#endif
 #endif
