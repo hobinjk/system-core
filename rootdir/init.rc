@@ -161,8 +161,8 @@ loglevel 3
     mkdir /dev/fscklogs 0770 root system
 
 on post-fs
-    # once everything is setup, no need to modify /
-    mount rootfs rootfs / ro remount
+    # once everything is setup, zygote needs to modify /
+    mount rootfs rootfs / rw remount
     # mount shared so changes propagate into child namespaces
     mount rootfs rootfs / shared rec
 
